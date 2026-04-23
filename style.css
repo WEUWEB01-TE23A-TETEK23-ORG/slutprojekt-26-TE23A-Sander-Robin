@@ -27,18 +27,26 @@ body {
     width: 1000px;
     margin: auto;
     padding: 30px;
+    background-color: #0000004a;
+    margin-top: 100px;
+    border-radius: 20px;
     display: grid;
-    grid-template-columns: 2fr 0.1fr;
-    gap: 30px;
+    grid-template-columns: 5fr 1fr;
+    gap: 20px;
     grid-template-areas: 
-    "sidhuvud sidhuvud"
-    "innehåll sidbar"
-    "sidfot sidfot";
+         "sidhuvud sidbar"  
+        "innehåll sidbar"
+        "sidfot sidfot";
+
+
+
+
 }
 
 /* sidhuvudet & menyn */
 header {
-    grid-area: sidhuvud;
+
+    margin-bottom: 10px;
 }
 header nav {
     background: rgb(205, 0, 34);
@@ -67,6 +75,26 @@ header nav a.aktiv {
      background: red;   
 }
 
+header article {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: #7400c7;
+   border-radius: 20px;
+   padding: 20px;
+   grid-area: sidbar;
+}
+
+header article p{
+   text-align: center;
+}
+
+header article h1{
+   color: #000000;
+   text-align: center;
+   font-size: 30px;
+   
+}
+
 /* Innehållet på sidan */
 main {
     background-color: #5370d1;
@@ -74,8 +102,10 @@ main {
     padding: 20px;
     display: flex;
     grid-area: innehåll;
+    margin-bottom: 10px;
 }
 main article {}
+
 main article h2 { 
     margin-bottom: 15px;
     text-align: center;
@@ -99,6 +129,7 @@ main article p {
 
 /* sidebar */
 aside {
+   margin-bottom: 10px;
      background-color: #65de9a;
     border-radius: 20px;
     padding: 20px;
@@ -109,6 +140,7 @@ aside h3 {
 }
 aside p {
     margin-bottom: 15px;
+    text-align: center;
 }
 aside p a {}
 
@@ -117,5 +149,6 @@ footer {
      background-color: #fff673;
     border-radius: 20px;
     padding: 20px;
+    grid-area: sidfot;
 }
 footer p {}
